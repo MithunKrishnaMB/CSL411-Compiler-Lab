@@ -23,9 +23,9 @@ The program operates by scanning the input string character by character (or seq
 **Sample Console Interaction:**
 ```text
 Enter the string:
-Hello   world.	This is a test.
+Hello   world.  This is a test.
 
 --- Results ---
-Words: 5
-Spaces: 6
+Words: 6
+Spaces: 5
 Tabs: 1

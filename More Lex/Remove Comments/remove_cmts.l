@@ -8,7 +8,7 @@ int out_idx = 0;
 %%
 
 "//".*                      { /* Ignore single line comments */ }
-"/*"([^*]|\*+[^*/])*\*+"/"  { /* Ignore multi-line comments */ }
+"/*".*"*/"                  { /* Ignore multi-line comments */ }
 .|\n                        { output[out_idx++] = yytext[0]; } /* Buffer valid code characters and newlines */
 
 %%
