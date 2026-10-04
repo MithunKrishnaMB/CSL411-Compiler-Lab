@@ -4,7 +4,7 @@ This repository contains my practice implementations for the **CSL411 Compiler L
 
 ## Repository Contents
 
-The repository is structured based on the lab cycle experiments provided in the course syllabus (`Lab Cycle.md`). For each implemented algorithm, there is a C or Lex source file along with a corresponding Markdown (`.md`) documentation file containing the theoretical concepts, logic explanation and perfectly aligned sample input/output.
+The repository is structured based on the lab cycle experiments provided in the course syllabus (`Lab Cycle.md`). For each implemented algorithm, there is a C or Lex source file along with a corresponding `README.md` documentation file containing the theoretical concepts, logic explanation and perfectly aligned sample input/output.
 
 Currently, the repository covers the core concepts from **Cycle 1** (Automata Theory & Lexical Analysis), **Cycle 2 & More Lex** (Lexical Analyzer using Lex/Flex) and **Cycle 3** (Syntax Analysis & Parsing).
 
@@ -39,4 +39,4 @@ The implementation of this repository is not yet complete. The following lab cyc
 
 ## Usage
 
-Each C program can be compiled using a standard C compiler (e.g., `gcc <filename>.c`) and run directly from the terminal. Lex programs (`.l`) require `flex` or `lex` to generate the C source (`flex <filename>.l`) before compiling. Make sure to refer to the corresponding `.md` file for each program to understand the expected input format, terminal interaction and theoretical background.
+Each C program can be compiled using a standard C compiler (e.g., `gcc <filename>.c`) and run directly from the terminal. Lex programs (`.l`) require `flex` or `lex` to generate the C source (`flex <filename>.l`) before compiling. Make sure to refer to the corresponding `README.md` file for each program to understand the expected input format, terminal interaction and theoretical background.
