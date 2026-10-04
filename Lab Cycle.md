@@ -2,17 +2,11 @@
 
 # **Cycle I** 
 
-- Design and implement a lexical analyzer for given language using C and 
+- Design and implement a lexical analyzer for given language using C and the lexical analyzer should ignore redundant spaces, tabs and newlines. 
 
-- the lexical analyzer should ignore redundant spaces, tabs and newlines. 
+- Write a program to find ε – closure of all states of any given NFA with ε transition. 
 
-- Write a program to find ε – closure of all states of any given NFA with ε 
-
-- transition. 
-
-- Write a program to convert NFA with ε transition to NFA without  ε 
-
-- transition. 
+- Write a program to convert NFA with ε transition to NFA without  ε transition. 
 
 - Write a program to convert NFA to DFA 
 
@@ -20,19 +14,13 @@
 
 # **Cycle II** 
 
-- Write a lex program to recognize all strings which does not contain first 
+- Write a lex program to recognize all strings which does not contain first four characters of your name as a substring. 
 
-- four characters of your name as a substring. 
-
-- Write a YACC program to recognize a valid variable which starts with a 
-
-- letter followed by any number of letters or digits. 
+- Write a YACC program to recognize a valid variable which starts with a letter followed by any number of letters or digits. 
 
 - Implementation of Calculator using LEX and YACC 
 
-- Convert the BNF rules into YACC form and write code to generate 
-
-- abstract syntax tree 
+- Convert the BNF rules into YACC form and write code to generate  abstract syntax tree 
 
 - Write a YACC program to check the syntax of FOR statement in C 
 
