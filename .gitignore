@@ -32,13 +32,14 @@
 *.app
 a.out
 
-# Lex and Yacc generated files (For upcoming Cycle 2)
+# Lex and Yacc generated files (For Cycle 2 & More Lex)
 lex.yy.c
 y.tab.c
 y.tab.h
 
 # Temporary test files
 test_input.txt
+input.txt
 
 # OS generated files
 .DS_Store

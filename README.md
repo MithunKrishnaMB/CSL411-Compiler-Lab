@@ -4,9 +4,9 @@ This repository contains my practice implementations for the **CSL411 Compiler L
 
 ## Repository Contents
 
-The repository is structured based on the lab cycle experiments provided in the course syllabus (`Lab Cycle.pdf`). For each implemented algorithm, there is a C source file along with a corresponding Markdown (`.md`) documentation file containing the theoretical concepts, logic explanation and perfectly aligned sample input/output.
+The repository is structured based on the lab cycle experiments provided in the course syllabus (`Lab Cycle.pdf`). For each implemented algorithm, there is a C or Lex source file along with a corresponding Markdown (`.md`) documentation file containing the theoretical concepts, logic explanation and perfectly aligned sample input/output.
 
-Currently, the repository covers the core concepts from **Cycle 1** (Automata Theory & Lexical Analysis) and **Cycle 3** (Syntax Analysis & Parsing).
+Currently, the repository covers the core concepts from **Cycle 1** (Automata Theory & Lexical Analysis), **Cycle 2 & More Lex** (Lexical Analyzer using Lex/Flex), and **Cycle 3** (Syntax Analysis & Parsing).
 
 ### Cycle 1
 This directory contains C implementations for introductory compiler phases and finite automata transformations:
@@ -15,6 +15,14 @@ This directory contains C implementations for introductory compiler phases and f
 - **$\epsilon$-NFA to NFA** (`eNFA_to_NFA.c`): Converts an NFA with $\epsilon$-transitions to an equivalent NFA without $\epsilon$-transitions.
 - **NFA to DFA** (`NFA_to_DFA.c`): Converts a Non-deterministic Finite Automaton (NFA) to a Deterministic Finite Automaton (DFA) using subset construction.
 - **DFA Minimization** (`min_DFA.c`): Minimizes a given DFA using the Myhill-Nerode (table-filling) algorithm.
+
+### Cycle 2 & More Lex
+This section focuses on using the Lex/Flex tool for pattern matching and stream filtering:
+- **Substring Recognition** (`Cycle 2/sub_name.l`): Identifies and accepts strings that do *not* contain a specific substring ("john") using Lex rule priority.
+- **Pattern Matching** (`More Lex/11_101.l`): Verifies if a binary string starts with the prefix `11` and ends with the suffix `101`.
+- **Word Counter** (`More Lex/count_string.l`): Counts the number of words, spaces, and tabs in a given string.
+- **Comment Removal** (`More Lex/remove_cmts.l`): Filters out single-line (`//`) and multi-line (`/* ... */`) comments from C source code.
+- **Character Replacement** (`More Lex/replace_$.l`): Acts as a stream editor to replace all spaces in the input string with the `$` character.
 
 ### Cycle 3
 This directory focuses on various parsing techniques and grammatical computations:
@@ -26,9 +34,9 @@ This directory focuses on various parsing techniques and grammatical computation
 ## Work in Progress
 
 The implementation of this repository is not yet complete. The following lab cycles will be added at a later time:
-- **Cycle 2:** Implementations using the LEX and YACC tools (calculators, variable recognition, syntax trees, etc).
+- **Cycle 2 (Yacc):** Implementations using the YACC tool (calculators, variable recognition, syntax trees, etc).
 - **Cycle 4:** Intermediate code generation and compiler backend assembly generation (8086).
 
 ## Usage
 
-Each C program can be compiled using a standard C compiler (e.g., `gcc <filename>.c`) and run directly from the terminal. Make sure to refer to the corresponding `.md` file for each program to understand the expected input format, terminal interaction and theoretical background.
+Each C program can be compiled using a standard C compiler (e.g., `gcc <filename>.c`) and run directly from the terminal. Lex programs (`.l`) require `flex` or `lex` to generate the C source (`flex <filename>.l`) before compiling. Make sure to refer to the corresponding `.md` file for each program to understand the expected input format, terminal interaction and theoretical background.

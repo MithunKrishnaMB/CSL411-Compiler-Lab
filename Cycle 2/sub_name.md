@@ -1,6 +1,6 @@
 ### Theory Concepts Involved
-* **Lex Tool (Lexical Analyzer Generator):** A program that generates lexical analyzers. It takes a set of regular expressions and corresponding actions, and produces a C program (usually `lex.yy.c`) that recognizes those expressions.
-* **Regular Expressions:** Used in Lex to define pattern-matching rules. The `.` matches any single character except a newline, and `*` means zero or more occurrences of the preceding character.
+* **Lex Tool (Lexical Analyzer Generator):** A program that generates lexical analyzers. It takes a set of regular expressions and corresponding actions and produces a C program (usually `lex.yy.c`) that recognizes those expressions.
+* **Regular Expressions:** Used in Lex to define pattern-matching rules. The `.` matches any single character except a newline and `*` means zero or more occurrences of the preceding character.
 * **Lex Rule Ambiguity & Priority:** When two Lex rules match the exact same number of characters in an input string, Lex resolves the tie by choosing the rule that is defined *first* in the file. 
 
 ### Explanation of Logic
@@ -8,7 +8,7 @@ The problem requires identifying strings that *do not* contain a specific substr
 We write two rules:
 1. `.*john.*\n` : Matches any line that contains the substring "john".
 2. `.*\n` : Matches absolutely any line.
-Because the first rule is listed at the top, if an input string contains "john", Lex will prioritize the first rule and reject it. If the string does not contain "john", the first rule fails, and Lex falls back to the second rule, which accepts the string.
+Because the first rule is listed at the top, if an input string contains "john", Lex will prioritize the first rule and reject it. If the string does not contain "john", the first rule fails and Lex falls back to the second rule, which accepts the string.
 
 ### How the Program Works
 1. **Definitions Section (`%{ ... %}`):** Standard C headers are included. 
